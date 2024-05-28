@@ -34,7 +34,7 @@ var findKthPositive = function (arr, k) {
   return s + k;
 };
 
-const arr = [1, 2, 3, 4],
-  k = 2;
+const arr = [2, 3, 4, 7, 11],
+  k = 5;
 
 console.log("Missing positive integer", findKthPositive(arr, k));
