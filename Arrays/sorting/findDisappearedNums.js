@@ -35,7 +35,7 @@ function findDisappeardNumbers(nums) {
   return ansArr;
 }
 
-// const arr = [4, 3, 2, 7, 8, 2, 3, 1];
-const arr = [1, 1];
+const arr = [4, 3, 2, 7, 8, 2, 3, 1];
+// const arr = [1, 1];
 
 console.log(findDisappeardNumbers(arr)); // returns

@@ -19,5 +19,5 @@ function bubbleSort(nums) {
  * Idea is we need to take the first element and compare it against the all other elements
  */
 
-const arr = [3, 1, 2, 5, 4];
+const arr = [3, 5, 2, 1, 4];
 console.log(bubbleSort(arr));
