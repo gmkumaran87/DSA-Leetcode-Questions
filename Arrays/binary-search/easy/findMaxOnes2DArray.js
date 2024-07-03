@@ -70,6 +70,6 @@ const matrix2 = [
   [0, 0],
   [1, 1],
 ];
-const n = matrix2.length,
-  m = matrix2[0].length;
+const n = matrix.length,
+  m = matrix[0].length;
 console.log("Rows wth max 1s", optimalSearch1s(matrix2, n, m));
