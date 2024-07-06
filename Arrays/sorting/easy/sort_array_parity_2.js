@@ -42,6 +42,17 @@ var sortArrayByParityII = function (nums) {
   return outArr;
 };
 
+function usingTwoPointer(nums) {
+  let s = 0,
+    e = 1;
+
+  while (s < nums.length || e < nums.length) {
+    if (nums[s] % 2 === 0) {
+      s = s + 2;
+    } else {
+    }
+  }
+}
 const nums = [4, 2, 5, 7];
 
 console.log(sortArrayByParityII(nums));

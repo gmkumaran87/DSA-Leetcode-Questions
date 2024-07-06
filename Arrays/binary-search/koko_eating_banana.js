@@ -66,13 +66,13 @@ function getTotalHours(arr, num) {
 
   for (let i = 0; i < arr.length; i++) {
     hours = hours + Math.ceil(arr[i] / num);
-    // console.log("Hours: ", hours, arr[i], num);
+    console.log("Hours: ", hours, arr[i], num);
   }
   return hours;
 }
-// const arr = [30, 11, 23, 4, 20],
-//   h = 6;
+const arr = [30, 11, 23, 4, 20],
+  h = 6;
 
-const arr = [312884470],
-  h = 312884469;
+// const arr = [312884470],
+//   h = 312884469;
 console.log("Output", minEatingSpeed(arr, h));
