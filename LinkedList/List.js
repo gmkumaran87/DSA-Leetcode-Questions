@@ -25,8 +25,14 @@ class List {
 
 	insertAtTail(head, value) {
 		let tempNode = new Node(value);
+		let current;
 
-		let current = head;
+		if (head === null) {
+			this.head = tempNode;
+			return this;
+		} else {
+			current = head;
+		}
 
 		while (current.next !== null) {
 			current = current.next;
@@ -52,22 +58,23 @@ class List {
 		if (head === null) return 'List is empty';
 
 		let current = head;
+		let previous = null;
 
 		if (current.data === value) {
-			head = current.next;
-			current.next = null;
+			head = head.next;
+			// current.next = null;
 			this.size--;
 			return true;
 		}
 
-		while (current.next !== null) {
-			if (current.next.data === value) {
-				let nextEl = current.next;
-
-				current.next = nextEl.next;
+		while (current !== null) {
+			if (current.data === value) {
+				previous.next = current.next;
+				current.next = null;
 				this.size--;
 				return true;
 			}
+			previous = current;
 			current = current.next;
 		}
 		return false;
@@ -88,14 +95,11 @@ class List {
 		// Traverse till last node/tail
 		let current = this.head;
 
-		while (current.next !== null) {
-			if (current.next.next === null) {
-				current.next = null;
-				this.size--;
-				return this;
-			}
+		while (current.next.next === null) {
 			current = current.next;
 		}
+		current.next = null;
+		return this;
 	}
 	search(head, value) {
 		if (head === null) return 'Not found';
@@ -130,12 +134,15 @@ class List {
 		}
 		return true;
 	}
-	getListStr() {
-		if (this.isEmpty()) {
+	getListStr(head) {
+		// console.log('Inside GetList', head);
+		if (head === null) {
 			console.log('Empty List');
 			return 'null';
 		} else {
-			let temp = this.head;
+			// console.log('Inside GetList ELSE', head);
+
+			let temp = head;
 			let str = '';
 			while (temp != null) {
 				str += String(temp.data);
