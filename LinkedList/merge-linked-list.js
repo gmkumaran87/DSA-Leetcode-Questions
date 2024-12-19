@@ -6,31 +6,40 @@ function mergeTwoList(list1, list2) {
 	let newList = new List();
 
 	while (first !== null && second !== null) {
+		console.log('Merging', first, second);
 		if (first.data < second.data) {
-			newList.insertAtTail(newList.head, first.data);
+			// newList.insertAtTail(newList.head, first.data);
+			newList.next = first;
 			first = first.next;
 		} else if (first.data > second.data) {
-			newList.insertAtTail(newList.head, second.data);
+			// newList.insertAtTail(newList.head, second.data);
+			newList.next = second;
+
 			second = second.next;
 		} else {
-			newList.insertAtTail(newList.head, first.data);
+			// newList.insertAtTail(newList.head, first.data);
 
-			newList.insertAtTail(newList.head, second.data);
+			// newList.insertAtTail(newList.head, second.data);
+			newList.next = first;
+			newList.next = second;
 			first = first.next;
 			second = second.next;
 		}
 	}
 
 	while (first !== null) {
-		newList.insertAtTail(newList.head, first.data);
+		// newList.insertAtTail(newList.head, first.data);
+		newList.next = first;
 		first = first.next;
 	}
 
 	while (second !== null) {
-		newList.insertAtTail(newList.head, second.data);
+		// newList.insertAtTail(newList.head, second.data);
+		newList.next = second;
+		// first = first.next;
 		second = second.next;
 	}
-	return newList;
+	return newList.next;
 }
 
 const list = new List();
@@ -46,7 +55,9 @@ const arr2 = [1, 2, 3, 4];
 
 arr2.forEach((el) => list2.insertAtTail(list2.head, el));
 
-console.log('List created 2', list2.getListStr(list2.head));
+// console.log('List created 2', list2.getListStr(list2.head));
 
-const mergedList = mergeTwoList(list, list2);
-console.log('After Merging List', list.getListStr(mergedList.head));
+// const mergedList = mergeTwoList(list, list2);
+// console.log('After Merging List', list.getListStr(mergedList.head));
+
+module.exports = mergeTwoList;
