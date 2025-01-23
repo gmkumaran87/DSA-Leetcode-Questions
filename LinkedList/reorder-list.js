@@ -42,6 +42,15 @@ function reorderList(head) {
 	let secondHalf = midRev;
 
 	while (secondHalf && secondHalf.next) {
+
+        let temp1 = curr.next;
+        let temp2 = secondHalf.next;
+        curr.next = secondHalf;
+        curr = temp1;
+        secondHalf.next = temp1;
+        secondHalf = temp2;
+
+        secondHalf.next = 
 		let temp = curr.next;
 		curr.next = secondHalf;
 		curr = temp;

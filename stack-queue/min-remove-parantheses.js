@@ -23,8 +23,8 @@ function minRemoveParantheses(str) {
 		} else if (ch === ')' || ch === '(') {
 			stack.push([ch, i]);
 		}
+		console.log('FIrst loop', stack);
 	}
-
 	for (let i = str.length - 1; i >= 0; i--) {
 		let ch = str[i];
 		if (stack.length > 0 && stack[stack.length - 1][1] === i) {
@@ -32,11 +32,12 @@ function minRemoveParantheses(str) {
 		} else {
 			result = ch + result;
 		}
+		console.log('Second', ch, result);
 	}
 
 	return result;
 }
 
-const s = 'lee(t(c)o)de)';
+const s = 'lee(t(c))o)de)';
 
 console.log('minRemoveParantheses', minRemoveParantheses(s));
