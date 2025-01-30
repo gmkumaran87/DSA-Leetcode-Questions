@@ -20,5 +20,5 @@ function nextGreaterElement(arr) {
 	return out;
 }
 
-const arr = [1, 2, 1]; // [5, 7, 1, 7, 6, 0];
+const arr = [1, 2, 1]; // [3,5, 4, 1, 7, 6, 0];
 console.log(nextGreaterElement(arr)); // Output: [6, 8, 6, 8, -1, 8, -1, 9, -1]

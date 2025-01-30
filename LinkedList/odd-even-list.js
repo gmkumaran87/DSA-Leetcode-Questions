@@ -76,6 +76,6 @@ const arr = [1, 2, 3, 4, 5, 6, 7];
 arr.forEach((el) => list.insertAtTail(list.head, el));
 
 console.log(list.getListStr(list.head));
-const newList = oddEvenSingle(list.head);
+const newList = oddEvenInPlace(list.head);
 
 console.log('Reordered', list.getListStr(newList));

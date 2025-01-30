@@ -8,10 +8,13 @@ function reverseBetween(head, left, right) {
 	let prev = dummy;
 	let curr = null;
 
+	console.log('Before Loop', { prev, prevNext: prev.next, left });
+
 	for (let i = 0; i < left - 1; i++) {
 		prev = prev.next;
 	}
 
+	console.log('Node', { prev, prevNext: prev.next, left });
 	let prevN = left === 1 ? dummy : prev;
 	curr = prev.next;
 	let localHead = curr;
@@ -25,6 +28,7 @@ function reverseBetween(head, left, right) {
 		curr = next;
 		count++;
 	}
+	console.log('After reverse', { prev, curr });
 	prevN.next = prev;
 	localHead.next = curr;
 	return dummy.next;
