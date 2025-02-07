@@ -10,7 +10,7 @@ function diameterTree(root) {
 		let rightH = height(root.right);
 
 		diameter = Math.max(leftH + rightH);
-
+		console.log('Tree', leftH, rightH);
 		return Math.max(leftH, rightH) + 1;
 	}
 

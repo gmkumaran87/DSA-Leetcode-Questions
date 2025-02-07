@@ -35,5 +35,5 @@ const arr = [2, 7, 5, 12, 7, 6, 15];
 
 arr.forEach((el) => list.insertAtTail(list.head, el));
 
-const newHead = removeNthLastNode(list.head, 2);
+const newHead = removeNthLastNode(list.head, 3);
 console.log('List created', list.getListStr(newHead));

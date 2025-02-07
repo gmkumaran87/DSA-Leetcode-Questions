@@ -13,15 +13,15 @@ function rotate(mat) {
 			let temp = mat[i][j];
 			mat[i][j] = mat[j][i];
 			mat[j][i] = temp;
-			console.log('Row', i, j, mat);
+			console.log('Row', i, j, mat, mat[i][j], mat[j][i]);
 		}
 	}
-
+	console.log('Transpose matrix', mat);
 	// Reverse the elements in every row
 	for (let i = 0; i < row; i++) {
 		reverse(mat[i]);
 	}
-	console.log('Transpose', mat);
+	return mat;
 }
 
 function reverse(arr) {

@@ -25,5 +25,5 @@ var findMaxConsecutiveOnes = function (nums) {
 	return count;
 };
 
-const nums = [1, 0, 1, 1, 0, 1];
+const nums = [1, 1, 1, 1, 0, 1];
 console.log(findMaxConsecutiveOnes(nums)); // Output: 3

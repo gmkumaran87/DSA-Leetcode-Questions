@@ -23,7 +23,31 @@ function findMaxElement(arr) {
 	return max;
 }
 
+function findMaxSub(arr, k) {
+	let n = arr.length;
+	let s = 0,
+		e = 0;
+	let maxTotal = Number.MIN_SAFE_INTEGER;
+	let total = 0;
+
+	for (let i = 0; i < k; i++) {
+		total = total + arr[i];
+	}
+
+	(e = k), (maxTotal = total);
+
+	while (e < n) {
+		total = total - arr[s] + arr[e];
+
+		maxTotal = Math.max(total, maxTotal);
+
+		e++;
+		s++;
+	}
+	return maxTotal;
+}
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
 	k = 3;
 
 console.log('Max sub array elements', maxSubArrayEl(array, k));
+console.log
