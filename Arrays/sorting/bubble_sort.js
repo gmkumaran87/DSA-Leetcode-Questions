@@ -3,7 +3,7 @@ function bubbleSort(nums) {
 		// let j = i +1;
 		let isSorted = false;
 		for (let j = i + 1; j < nums.length - i; j++) {
-			console.log('Bubble ', nums, i, j);
+			// console.log('Bubble ', nums, i, j);
 
 			if (nums[j] < nums[j - 1]) {
 				let temp = nums[j];
@@ -11,6 +11,7 @@ function bubbleSort(nums) {
 				nums[j - 1] = temp;
 				isSorted = true;
 			}
+			console.log('Nums', nums, i, j);
 		}
 		if (!isSorted) break;
 	}
@@ -37,5 +38,5 @@ function bubbleSortRecursion(arr, r, c) {
  */
 
 const arr = [3, 5, 2, 1, 4];
-// console.log(bubbleSort(arr));
-console.log('BubbleSort', bubbleSortRecursion(arr, arr.length - 1, 0));
+console.log(bubbleSort(arr));
+// console.log('BubbleSort', bubbleSortRecursion(arr, arr.length - 1, 0));

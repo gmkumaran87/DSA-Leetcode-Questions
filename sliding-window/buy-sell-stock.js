@@ -10,8 +10,8 @@ function maxProfit(prices) {
 		if (prices[b] >= prices[s]) {
 			b = s;
 		}
+		console.log('Max', b, s, res, currProfit);
 		s++;
-		console.log('Max', b, s, res);
 	}
 	return res;
 }

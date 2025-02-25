@@ -13,7 +13,7 @@ function getMiddleNode(head) {
 	return slow;
 }
 
-const arr = [3, 4, 5, 99, 7, 23, 40];
+const arr = [3, 4, 5, 99, 7, 23, 40, 5];
 const list = new List();
 arr.forEach((el) => list.insertAtTail(list.head, el));
 
