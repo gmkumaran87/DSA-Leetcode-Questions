@@ -5,7 +5,7 @@ function kthSmallesEl(root, k) {
 
 	function helper(root, k) {
 		if (!root) return null;
-		console.log('Root', root, count);
+		console.log('Root', { root, count });
 
 		const left = helper(root.left, k);
 
@@ -13,7 +13,7 @@ function kthSmallesEl(root, k) {
 			return left;
 		}
 		count++;
-		console.log('Count', count, root);
+		console.log('Count', { count, root, left });
 		if (count === k) {
 			return root;
 		}
@@ -26,8 +26,8 @@ function kthSmallesEl(root, k) {
 
 const bst = new BST(6);
 bst.insert(4);
-bst.insert(9);
 bst.insert(2);
+bst.insert(9);
 bst.insert(5);
 
 bst.insert(8);
